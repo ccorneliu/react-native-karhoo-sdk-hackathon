@@ -12,10 +12,18 @@ import React
 class NativeKarhooBridge: NSObject {
 
     private let setupAdapter = SetupAdapter()
+    private let loginAdapter = LoginAdapter()
 
     @objc(setConfiguration:)
     func setConfiguration(dictionary: NSDictionary) -> Void {
         setupAdapter.setup(with: dictionary)
+    }
+
+    @objc(login:password:callback:)
+    func login(with username: String, password: String, callback: @escaping RCTResponseSenderBlock) -> Void {
+        loginAdapter.login(with: username, password: password) { resultString in
+            callback([NSNull(), resultString])
+        }
     }
 
     static func moduleName() -> String! {

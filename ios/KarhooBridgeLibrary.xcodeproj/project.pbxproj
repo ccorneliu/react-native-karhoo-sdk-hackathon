@@ -11,6 +11,7 @@
 		A112E151256C057400DC17B5 /* NativeKarhooBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A112E14E256C057400DC17B5 /* NativeKarhooBridge.swift */; };
 		A112E152256C057400DC17B5 /* KarhooConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A112E14F256C057400DC17B5 /* KarhooConfig.swift */; };
 		A112E153256C057400DC17B5 /* NativeKarhooBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A112E150256C057400DC17B5 /* NativeKarhooBridge.m */; };
+		A1F8E20A256C15140061B151 /* LoginAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8E209256C15140061B151 /* LoginAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		A112E14E256C057400DC17B5 /* NativeKarhooBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeKarhooBridge.swift; sourceTree = "<group>"; };
 		A112E14F256C057400DC17B5 /* KarhooConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarhooConfig.swift; sourceTree = "<group>"; };
 		A112E150256C057400DC17B5 /* NativeKarhooBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeKarhooBridge.m; sourceTree = "<group>"; };
+		A1F8E209256C15140061B151 /* LoginAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			children = (
 				A1082ED4256BEB6200F9E630 /* SetupAdapter.swift */,
 				A112E14F256C057400DC17B5 /* KarhooConfig.swift */,
+				A1F8E209256C15140061B151 /* LoginAdapter.swift */,
 				A112E150256C057400DC17B5 /* NativeKarhooBridge.m */,
 				A112E14E256C057400DC17B5 /* NativeKarhooBridge.swift */,
 			);
@@ -132,6 +135,7 @@
 				A1082ED5256BEB6200F9E630 /* SetupAdapter.swift in Sources */,
 				A112E151256C057400DC17B5 /* NativeKarhooBridge.swift in Sources */,
 				A112E152256C057400DC17B5 /* KarhooConfig.swift in Sources */,
+				A1F8E20A256C15140061B151 /* LoginAdapter.swift in Sources */,
 				A112E153256C057400DC17B5 /* NativeKarhooBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

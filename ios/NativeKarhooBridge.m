@@ -11,5 +11,6 @@
 @interface RCT_EXTERN_MODULE(NativeKarhooBridge, NSObject)
 
 RCT_EXTERN_METHOD(setConfiguration:(NSDictionary *)configuration)
+RCT_EXTERN_METHOD(login:(NSString *)username password:(NSString *)password callback:(RCTResponseSenderBlock)callback)
 
 @end

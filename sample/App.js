@@ -8,6 +8,8 @@
 
 import React, { Component } from 'react';
 import {
+  Alert,
+  AlertButton,
   SafeAreaView,
   StatusBar,
   Button,
@@ -23,6 +25,16 @@ class App extends Component {
     });
   }
 
+  login() {
+    Karhoo.login("adyentest1@karhoo.com", "Karhoo2020!", (error, message) => {
+      if (error) {
+        Alert.alert("Login error", error, ["OK"])
+      } else {
+        Alert.alert("Login notice", message, ["OK"])
+      }
+    });
+  }
+
   render() {
     return (
       <>
@@ -30,6 +42,9 @@ class App extends Component {
         <SafeAreaView>
           <Button title="Configure the SDK" onPress={() => {
             this.configureTheSDK()
+          }} />
+          <Button title="Login" onPress={() => {
+            this.login()
           }} />
         </SafeAreaView>
       </>

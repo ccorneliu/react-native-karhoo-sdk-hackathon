@@ -9,10 +9,7 @@
 import Foundation
 import KarhooSDK
 
-@objc(KRSetupAdapter)
 class SetupAdapter: NSObject {
-
-    @objc(setupWith:)
     func setup(with dictionary: NSDictionary) {
         let rawEnv = dictionary.value(forKey: "environment") as? String
         var env: KarhooEnvironment

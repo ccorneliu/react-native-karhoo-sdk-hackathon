@@ -19,6 +19,10 @@ import Karhoo from 'react-native-karhoo-sdk';
 
 class App extends Component {
 
+  constructor(props) {
+    super(props)
+  }
+
   configureTheSDK() {
     Karhoo.setConfiguration({
       "environment": "sandbox"
@@ -26,7 +30,8 @@ class App extends Component {
   }
 
   login() {
-    Karhoo.login("adyentest1@karhoo.com", "Karhoo2020!", (error) => {
+    const { username, password } = this.state;
+    Karhoo.login(username, password, (error) => {
       Alert.alert("Login error", error, ["OK"])
     }, (message) => {
       Alert.alert("Login notice", message, ["OK"])
@@ -38,12 +43,21 @@ class App extends Component {
       <>
         <StatusBar barStyle="dark-content" />
         <SafeAreaView>
-          <Button title="Configure the SDK" onPress={() => {
+          <Button 
+            title="Configure the SDK" 
+            onPress={() => {
             this.configureTheSDK()
           }} />
           <TextInput 
-            title="Username"
-            style={{padding: 20}}
+            placeholder="Username"
+            style={{ margin: 20, borderBottomColor: "#000", borderBottomWidth: 1, fontSize: 18, height: 40 }}
+            onChangeText={text => this.setState({ username: text })}
+          />
+          <TextInput 
+            placeholder="Password"
+            secureTextEntry={true}
+            style={{ margin: 20, borderBottomColor: "#000", borderBottomWidth: 1, fontSize: 18, height: 40 }}
+            onChangeText={text => this.setState({ password: text })}
           />
           <Button title="Login" onPress={() => {
             this.login()

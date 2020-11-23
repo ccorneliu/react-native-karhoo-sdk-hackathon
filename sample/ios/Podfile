@@ -8,6 +8,8 @@ target 'KarhooNetworkSDKExample' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'KarhooSDK', :git => 'https://github.com/karhoo/karhoo-ios-sdk.git', :branch => 'develop'
+
   target 'KarhooNetworkSDKExampleTests' do
     inherit! :complete
     # Pods for testing

@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
 
   s.authors      = package['author']
   s.homepage     = package['homepage']
-  s.platform     = :ios, "9.1"
+  s.platform     = :ios, "10.0"
 
   s.source       = { :git => "https://github.com/ccorneliu/react-native-karhoo-sdk-hackathon.git", :tag => "v#{s.version}" }
-  s.source_files  = "ios/**/*.{h,m}"
+  s.source_files  = "ios/**/*.{h,m,swift}"
 
   s.dependency 'React'
   s.dependency 'KarhooSDK'

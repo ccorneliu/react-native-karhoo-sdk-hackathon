@@ -9,9 +9,9 @@
 import React, { Component } from 'react';
 import {
   Alert,
-  AlertButton,
   SafeAreaView,
   StatusBar,
+  TextInput,
   Button,
 } from 'react-native';
 
@@ -26,12 +26,10 @@ class App extends Component {
   }
 
   login() {
-    Karhoo.login("adyentest1@karhoo.com", "Karhoo2020!", (error, message) => {
-      if (error) {
-        Alert.alert("Login error", error, ["OK"])
-      } else {
-        Alert.alert("Login notice", message, ["OK"])
-      }
+    Karhoo.login("adyentest1@karhoo.com", "Karhoo2020!", (error) => {
+      Alert.alert("Login error", error, ["OK"])
+    }, (message) => {
+      Alert.alert("Login notice", message, ["OK"])
     });
   }
 
@@ -43,6 +41,10 @@ class App extends Component {
           <Button title="Configure the SDK" onPress={() => {
             this.configureTheSDK()
           }} />
+          <TextInput 
+            title="Username"
+            style={{padding: 20}}
+          />
           <Button title="Login" onPress={() => {
             this.login()
           }} />

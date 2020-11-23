@@ -19,10 +19,16 @@ class NativeKarhooBridge: NSObject {
         setupAdapter.setup(with: dictionary)
     }
 
-    @objc(login:password:callback:)
-    func login(with username: String, password: String, callback: @escaping RCTResponseSenderBlock) -> Void {
-        loginAdapter.login(with: username, password: password) { resultString in
-            callback([NSNull(), resultString])
+    @objc(login:password:errorCallback:successCallback:)
+    func login(with username: String, password: String,
+               errorCallback: @escaping RCTResponseSenderBlock,
+               successCallback: @escaping RCTResponseSenderBlock) -> Void {
+        loginAdapter.login(with: username, password: password) { isSuccessful, resultString in
+            if isSuccessful {
+                successCallback([resultString])
+            } else {
+                errorCallback([resultString])
+            }
         }
     }
 
@@ -31,6 +37,6 @@ class NativeKarhooBridge: NSObject {
     }
 
     static func requiresMainQueueSetup() -> Bool {
-        return false
+        return true
     }
 }

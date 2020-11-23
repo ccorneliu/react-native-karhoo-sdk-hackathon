@@ -5,6 +5,7 @@ const { NativeKarhooBridge } = NativeModules;
 
 class Karhoo {
     static setConfiguration(params) { NativeKarhooBridge.setConfiguration(params) }
+    static login(username, password, errorCallback, successCallback) { NativeKarhooBridge.login(username, password, errorCallback, successCallback) }
 }
 
 Karhoo.emitter = new NativeEventEmitter(NativeKarhooBridge);

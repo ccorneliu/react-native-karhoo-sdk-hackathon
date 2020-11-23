@@ -1,0 +1,41 @@
+{
+  "name": "react-native-karhoo-sdk",
+  "version": "0.1.0",
+  "description": "Karhoo's Networking SDK",
+  "main": "index.js",
+  "nativePackage": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "directories": {
+    "example": "./KarhooNetworkSDKExample"
+  },
+  "files": [
+    "android",
+    "ios",
+    "react-native-karhoo-sdk.podspec",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karhoo/karhoo-android-sdk"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "android"
+  ],
+  "author": {
+    "name": "Karhoo",
+    "email": "cornel.chitanu@karhoo.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karhoo/karhoo-android-sdk/issues"
+  },
+  "homepage": "https://github.com/karhoo/karhoo-android-sdk#readme",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  },
+  "dependencies": {}
+}

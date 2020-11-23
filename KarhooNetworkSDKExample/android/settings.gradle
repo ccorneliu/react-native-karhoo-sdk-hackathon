@@ -1,0 +1,5 @@
+rootProject.name = 'KarhooNetworkSDKExample'
+include ':react-native-karhoo-sdk'
+project(':react-native-karhoo-sdk').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-karhoo-sdk/android')
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'

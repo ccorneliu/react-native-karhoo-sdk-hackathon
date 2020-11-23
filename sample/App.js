@@ -13,9 +13,22 @@ import {
   StatusBar,
   TextInput,
   Button,
+  StyleSheet,
+  View,
 } from 'react-native';
 
 import Karhoo from 'react-native-karhoo-sdk';
+
+const styles = StyleSheet.create({
+  button: {
+    margin: 20,
+    padding: 30
+  },
+  space: {
+    width: 20, // or whatever size you need
+    height: 20,
+  },
+})
 
 class App extends Component {
 
@@ -44,10 +57,12 @@ class App extends Component {
         <StatusBar barStyle="dark-content" />
         <SafeAreaView>
           <Button 
-            title="Configure the SDK" 
+            title="Configure the SDK"
+            style={styles.button}
             onPress={() => {
             this.configureTheSDK()
           }} />
+          <View style={styles.space} />
           <TextInput 
             placeholder="Username"
             style={{ margin: 20, borderBottomColor: "#000", borderBottomWidth: 1, fontSize: 18, height: 40 }}
@@ -59,9 +74,13 @@ class App extends Component {
             style={{ margin: 20, borderBottomColor: "#000", borderBottomWidth: 1, fontSize: 18, height: 40 }}
             onChangeText={text => this.setState({ password: text })}
           />
-          <Button title="Login" onPress={() => {
-            this.login()
-          }} />
+          <Button 
+            title="Login"
+            style={styles.button}
+            containerViewStyle={{ marginTop: 15 }}
+            onPress={() => {
+              this.login()
+            }} />
         </SafeAreaView>
       </>
     );
